@@ -9,6 +9,6 @@ export const returnErrors = (msg, status, id = null) => {
 
 export const clearErrors = () => {
     return {
-        types: CLEAR_ERRORS
+        type: CLEAR_ERRORS
     }
 }
