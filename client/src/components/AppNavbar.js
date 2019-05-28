@@ -14,6 +14,8 @@ import {
     Container
 } from 'reactstrap';
 
+import RegisterModal from "./auth/RegisterModal";
+
 class AppNavBar extends React.Component {
     state = {
         isOpen: false
@@ -34,7 +36,9 @@ class AppNavBar extends React.Component {
                         <NavbarToggler onClick={this.toggle}></NavbarToggler>
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <Nav className="ml-auto" navbar >
-                                <NavLink href="https://www.facebook.com/">facebook</NavLink>
+                                <NavItem>
+                                    <RegisterModal />
+                                </NavItem>
                             </Nav>
                         </Collapse>
                     </Container>

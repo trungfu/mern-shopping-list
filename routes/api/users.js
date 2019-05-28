@@ -8,8 +8,10 @@ const User = require('../../models/User');
 router.post('/', (req, res) => {
   const { name, email, password } = req.body;
 
+  console.log(req.body);
+
   if(!name || !email || !password) {
-    return res.status(400);
+    return res.status(400).json({msg: 'Please fill all field'});
   }
 
     User.findOne({ email })
