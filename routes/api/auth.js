@@ -24,7 +24,7 @@ router.post('/', (req, res) => {
             bycrypt.compare(password, user.password)
                 .then(isMatch => {
                     if(!isMatch) {
-                        return res.status(400).json({ mes: 'Invalid credentials'})
+                        return res.status(400).json({ msg: 'Invalid credentials'})
                     }
 
                     jwt.sign(
